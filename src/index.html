@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Cabecera Página</title>
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container py-4">
+
+        <div class="card bg-dark border-secondary">
+            <div class="card-header bg-secondary">
+                <h2 class="h4 mb-0">Ejercicio 1: Cabecera de pagina</h2>
+            </div>
+            <div class="card-body">
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label for="titulo" class="form-label">Título:</label>
+                        <input type="text" class="form-control bg-dark text-light border-secondary" id="titulo"
+                            value="Mi Página Web">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="color" class="form-label">Color:</label>
+                        <input type="color" class="form-control form-control-color" id="color" value="#0d6efd">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="fuente" class="form-label">Fuente:</label>
+                        <select class="form-select bg-dark text-light border-secondary" id="fuente">
+                            <option value="Arial">Arial</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="alineacion" class="form-label">Alineación:</label>
+                        <select class="form-select bg-dark text-light border-secondary" id="alineacion">
+                            <option value="izquierda">Izquierda</option>
+                            <option value="centrado">Centro</option>
+                            <option value="derecha">Derecha</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="d-grid">
+                    <button id="actualizar-btn" class="btn btn-primary">
+                        <i class="bi bi-arrow-repeat me-2"></i>Actualizar Propiedades
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-dark border-secondary mt-4">
+            <div class="card-header bg-secondary">
+                <h2 class="h4 mb-0">Propiedades Actuales</h2>
+            </div>
+            <div class="card-body">
+                <pre class="p-3 bg-black text-success border border-success rounded" id="propiedades"></pre>
+            </div>
+        </div>
+
+
+
+        <!-- Ejercicio 2 -->
+        <div id="ejercicio2" class="exercise-container mt-5">
+            <div class="card bg-dark border-secondary">
+                <div class="card-header bg-secondary">
+                    <h2 class="h4 mb-0">Ejercicio 2: Calculadora</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="num1" class="form-label">Número 1:</label>
+                            <input type="number" class="form-control bg-dark text-light border-secondary" id="num1"
+                                value="0">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="num2" class="form-label">Número 2:</label>
+                            <input type="number" class="form-control bg-dark text-light border-secondary" id="num2"
+                                value="0">
+                        </div>
+
+                        <div class="col-12">
+                            <div class="btn-group d-flex flex-wrap">
+                                <button class="btn btn-outline-primary operacion" data-op="sumar">Sumar</button>
+                                <button class="btn btn-outline-primary operacion" data-op="restar">Restar</button>
+                                <button class="btn btn-outline-primary operacion"
+                                    data-op="multiplicar">Multiplicar</button>
+                                <button class="btn btn-outline-primary operacion" data-op="dividir">Dividir</button>
+                                <button class="btn btn-outline-primary operacion" data-op="potencia">Potencia</button>
+                                <button class="btn btn-outline-primary operacion" data-op="factorial1">Factorial
+                                    (N1)</button>
+                                <button class="btn btn-outline-primary operacion" data-op="factorial2">Factorial
+                                    (N2)</button>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <div class="card bg-black border-success">
+                                <div class="card-body">
+                                    <h3 class="h5 text-success">Resultado:</h3>
+                                    <pre class="text-success mb-0" id="resultado-calc">Seleccione una operación</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Ejercicio 3 -->
+        <div id="ejercicio3" class="exercise-container mt-5">
+            <div class="card bg-dark border-secondary">
+                <div class="card-header bg-secondary">
+                    <h2 class="h4 mb-0">Ejercicio 3: Canción</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="titulo-cancion" class="form-label">Título:</label>
+                            <input type="text" class="form-control bg-dark text-light border-secondary"
+                                id="titulo-cancion" placeholder="Introduce el título">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="genero-cancion" class="form-label">Género:</label>
+                            <select class="form-select bg-dark text-light border-secondary" id="genero-cancion">
+                                <option value="Pop">Pop</option>
+                                <option value="Rock">Rock</option>
+                                <option value="Hip Hop">Hip Hop</option>
+                                <option value="Electrónica">Electrónica</option>
+                                <option value="Clásica">Clásica</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="autor-cancion" class="form-label">Autor:</label>
+                            <input type="text" class="form-control bg-dark text-light border-secondary"
+                                id="autor-cancion" placeholder="Introduce el autor">
+                        </div>
+                        <div class="col-md-6 d-flex align-items-end">
+                            <button id="actualizar-cancion" class="btn btn-primary w-100">
+                                <i class="bi bi-music-note-beamed me-2"></i>Mostrar Datos
+                            </button>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <div class="card bg-black border-primary">
+                                <div class="card-body">
+                                    <h3 class="h5 text-primary">Información de la Canción:</h3>
+                                    <pre class="text-info mb-0"
+                                        id="datos-cancion">Complete los datos y haga clic en "Mostrar Datos"</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 4 -->
+        <div id="ejercicio4" class="exercise-container mt-5">
+            <div class="card bg-dark border-secondary">
+                <div class="card-header bg-secondary">
+                    <h2 class="h4 mb-0">Ejercicio 4: Cuenta Bancaria</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="nombre-cuenta" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control bg-dark text-light border-secondary"
+                                id="nombre-cuenta" placeholder="Nombre del titular">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="tipo-cuenta" class="form-label">Tipo de cuenta:</label>
+                            <select class="form-select bg-dark text-light border-secondary" id="tipo-cuenta">
+                                <option value="Ahorros">Ahorros</option>
+                                <option value="Corriente">Corriente</option>
+                                <option value="Nómina">Nómina</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="numero-cuenta" class="form-label">Número de cuenta:</label>
+                            <input type="text" class="form-control bg-dark text-light border-secondary"
+                                id="numero-cuenta" placeholder="Número de cuenta">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="saldo-inicial" class="form-label">Saldo inicial ($):</label>
+                            <input type="number" step="0.01" class="form-control bg-dark text-light border-secondary"
+                                id="saldo-inicial" placeholder="0.00" min="0">
+                        </div>
+
+                        <div class="col-12">
+                            <div class="card bg-black border-warning mb-3">
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="monto-deposito" class="form-label">Monto a depositar
+                                                ($):</label>
+                                            <input type="number" step="0.01"
+                                                class="form-control bg-dark text-light border-secondary"
+                                                id="monto-deposito" placeholder="0.00" min="0">
+                                        </div>
+                                        <div class="col-md-6 d-flex align-items-end">
+                                            <button id="depositar-btn" class="btn btn-success w-100">
+                                                <i class="bi bi-arrow-down-circle me-2"></i>Depositar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-black border-danger mb-3">
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="monto-retiro" class="form-label">Monto a retirar ($):</label>
+                                            <input type="number" step="0.01"
+                                                class="form-control bg-dark text-light border-secondary"
+                                                id="monto-retiro" placeholder="0.00" min="0">
+                                        </div>
+                                        <div class="col-md-6 d-flex align-items-end">
+                                            <button id="retirar-btn" class="btn btn-danger w-100">
+                                                <i class="bi bi-arrow-up-circle me-2"></i>Retirar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="card bg-black border-info">
+                                <div class="card-header bg-info text-dark">
+                                    <h3 class="h5 mb-0">Información de la Cuenta</h3>
+                                </div>
+                                <div class="card-body">
+                                    <pre class="text-light mb-2" id="datos-cuenta">Complete los datos iniciales</pre>
+                                    <pre class="text-warning mb-0" id="saldo-cuenta">Saldo: $0.00</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Ejercicio 5 -->
+        <div id="ejercicio5" class="exercise-container mt-5">
+            <div class="card bg-dark border-secondary">
+                <div class="card-header bg-secondary">
+                    <h2 class="h4 mb-0">Ejercicio 5: Persona y Empleado</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="nombre-persona" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control bg-dark text-light border-secondary"
+                                id="nombre-persona" placeholder="Nombre">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="apellido-persona" class="form-label">Apellido:</label>
+                            <input type="text" class="form-control bg-dark text-light border-secondary"
+                                id="apellido-persona" placeholder="Apellido">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="direccion-persona" class="form-label">Dirección:</label>
+                            <input type="text" class="form-control bg-dark text-light border-secondary"
+                                id="direccion-persona" placeholder="Dirección">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="telefono-persona" class="form-label">Teléfono:</label>
+                            <input type="tel" class="form-control bg-dark text-light border-secondary"
+                                id="telefono-persona" placeholder="Teléfono">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="edad-persona" class="form-label">Edad:</label>
+                            <input type="number" class="form-control bg-dark text-light border-secondary"
+                                id="edad-persona" placeholder="Edad" min="0">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="sueldo-empleado" class="form-label">Sueldo ($):</label>
+                            <input type="number" step="0.01" class="form-control bg-dark text-light border-secondary"
+                                id="sueldo-empleado" placeholder="0.00" min="0">
+                        </div>
+
+                        <div class="col-12">
+                            <button id="mostrar-empleado" class="btn btn-primary w-100">
+                                <i class="bi bi-person-badge me-2"></i>Mostrar Datos del Empleado
+                            </button>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <div class="card bg-black border-primary">
+                                <div class="card-body">
+                                    <h3 class="h5 text-primary">Información del Empleado:</h3>
+                                    <pre class="text-light mb-0"
+                                        id="datos-empleado">Complete los datos y haga clic en el botón</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script type="module" src="/ts/main.ts"></script>
+</body>
+
+</html>
