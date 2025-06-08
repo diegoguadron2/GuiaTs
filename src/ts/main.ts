@@ -236,3 +236,10 @@ ejercicio5MostrarBtn.addEventListener('click', () => {
 
   ejercicio5DatosOutput.textContent = empleadoEjercicio5.mostrarDatos();
 });
+
+
+
+
+
+
+//Diego Guadron
